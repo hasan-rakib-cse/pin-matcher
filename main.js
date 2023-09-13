@@ -69,5 +69,10 @@ document.getElementById('verifyPin').addEventListener('click', function() {
             pinSuccessMessage.style.display = 'none';
         }
     }
+
+    // how many chance you have now. 
+    var totalChance = document.getElementById('getChance');
+    totalChance.innerHTML = count + ' try left';
+
 })
 
