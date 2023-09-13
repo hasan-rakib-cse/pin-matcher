@@ -42,6 +42,9 @@ input[type='text']{
     height: 50px;
     padding: 10px;
 }
+.pin-generator input {
+    color: #000;
+}
 .calculator-section input {
     text-align: right;
 }
@@ -106,4 +109,8 @@ color: #E0B612;
 .action-left {
     color: #FF3C5F;
     margin-top: 10px;
+}
+#pin-failure,
+#pin-success {
+    display: none;
 }

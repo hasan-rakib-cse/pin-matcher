@@ -12,13 +12,13 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator half-width">
-                    <input class="form-control" type="text" disabled>
+                    <input class="form-control" type="text" value="" id="pinDisplay" disabled>
                     <button class="generate-btn" id="randomButton">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="input-section half-width">
-                    <input class="form-control" type="text">
+                <div class="input-section calculator-section half-width">
+                    <input class="form-control" type="text" id="calculatorDisplay">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
@@ -37,21 +37,21 @@
                               <div class="button">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button" >&lt;</div>
+                                <div class="button" id="clear">&lt;</div>
                                 <div class="button">0</div>
-                                <div class="button" >C</div>
+                                <div class="button" id="allClear">C</div>
                             </div>
                             <div>
-                                <button type="" class="submit-btn">Submit</button>
-                                <p class="action-left">3 try left</p>
+                                <button id="verifyPin" type="submit" class="submit-btn">Submit</button>
+                                <p id="getChance" class="action-left">3 try left</p>
                             </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="notify-section">
-            <p class="notify matched">❌ Pin Didn't Match, Please try again</p>
-            <p class="notify notMatched">✅ Pin Matched... Secret door is opening for you</p>
+            <p id="pin-failure" class="notify matched">❌ Pin Didn't Match, Please try again</p>
+            <p id="pin-success" class="notify notMatched">✅ Pin Matched... Secret door is opening for you</p>
         </div>
     </div>
 
