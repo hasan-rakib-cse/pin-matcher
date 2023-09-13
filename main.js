@@ -12,3 +12,27 @@ rand.addEventListener('click', function randomGenerator() {
     let pinInput = document.getElementById('pinDisplay');
     pinInput.value = randomNumber;
 });
+
+// calculator functionality
+var calculatorInput = document.getElementById('calculatorDisplay');
+let buttons = document.querySelectorAll('.button');
+
+let string = "";
+let buttonArray = Array.from(buttons);
+
+buttonArray.forEach(button => {
+    button.addEventListener('click', function(e) {
+        if(e.target.innerHTML == '&lt;') {
+            string = string.toString().slice(0, -1);
+            calculatorInput.value = string;
+        }
+        else if(e.target.innerHTML == 'C') {
+            string = '';
+            calculatorInput.value = string;
+        }
+        else {
+            string += e.target.innerHTML;
+            calculatorInput.value = string;
+        }
+    })
+});
