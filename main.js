@@ -36,3 +36,38 @@ buttonArray.forEach(button => {
         }
     })
 });
+
+// matching function
+let count = 3;
+document.getElementById('verifyPin').addEventListener('click', function() {
+
+    // Generate Pin input screen value
+    let randomInputPin = document.getElementById('pinDisplay');
+    randomPin = randomInputPin.value;
+
+    // calculator screen value
+    let calcInputPin = document.getElementById('calculatorDisplay');
+    calculatorPin = calcInputPin.value;
+
+    // for showing success or failure message
+    const pinSuccessMessage = document.getElementById('pin-success');
+    const pinFailureMessage = document.getElementById('pin-failure');
+
+    count--;
+    var submitBtn = document.getElementById('verifyPin');
+
+    // for 3 try
+    if(count == 0) {
+        submitBtn.setAttribute("disabled", "");
+    } else {
+        // matching condition
+        if(randomPin === calculatorPin) {
+            pinSuccessMessage.style.display = 'block';
+            pinFailureMessage.style.display = 'none';
+        } else {
+            pinFailureMessage.style.display = 'block';
+            pinSuccessMessage.style.display = 'none';
+        }
+    }
+})
+
